@@ -24,13 +24,13 @@ int main(int argc, char const *argv[])
 
     assert(6 == height(root));
 
-    assert("November" == root->name_);
-    assert("July" == root->left_->name_);
-    assert("October" == root->right_->name_);
+    assert("November" == root->data_.name_);
+    assert("July" == root->left_->data_.name_);
+    assert("October" == root->right_->data_.name_);
 
-    assert("August" == bsearch(root, "August")->name_);
+    assert("August" == bsearch(root, "August")->data_.name_);
 
-    sort(&root, input);
+    sort(root, input);
 
     assert("April" == input.at(0));
     assert("October" == input.at(input.size() - 1));
